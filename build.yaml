@@ -21,6 +21,8 @@ include:
  - board: seeeduino_xiao_ble
    shield: roBa_R
    snippet: studio-rpc-usb-uart
+   cmake-args: -DCONFIG_STICKY_LAYER_NOTIFY=y
+   artifact-name: roba_r_reterminal
  - board: seeeduino_xiao_ble
    shield: roBa_L
  - board: seeeduino_xiao_ble

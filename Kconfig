@@ -1,0 +1,17 @@
+menuconfig STICKY_LAYER_NOTIFY
+    bool "Notify reTerminal Sticky of active keymap layer"
+    default y if SHIELD_ROBA_R
+    depends on ZMK_BLE && SHIELD_ROBA_R
+
+if STICKY_LAYER_NOTIFY
+config STICKY_KEYBOARD_ID
+    string "Stable keyboard ID reported to Sticky"
+    default "roba"
+config STICKY_CENTRAL_IS_LEFT
+    bool
+    default n
+config STICKY_LAYER_NOTIFY_LOG_LEVEL
+    int "Log level"
+    default 2
+    range 0 4
+endif
